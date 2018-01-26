@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Add Review Page</title>
+<title>Add Product Page</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -10,20 +10,19 @@
 
 <body>
 <div style="text-align:center" >
-  <h1>Add Review</h1>
+  <h1>Add Product</h1>
   <br><br>
-  <form action="submit_review.php" method="post">
+  <form action="submit_product.php" method="post">
     Name of Product : <input type="text" name="productname" autofocus><br><br>
-    Rating (between 0 to 10) : <input type="number" name="rating" step="0.01" min="0" max="10.1" autocomplete="off"><br><br>
-    Comment : <textarea name="comment" rows="5" cols="50"></textarea><br><br>
-    <input type="submit" value="Submit Review">
+    Description : <textarea name="description" rows="3" cols="50"></textarea><br><br>
+    <input type="submit" value="Submit Product">
   </form>
 <br>
-  <form method="get" action="/rating/add_product.php">
-    <button type="submit">Add Product</button>
+  <form method="get" action="/rating/add_review.php">
+    <button type="submit">Add Reviews</button>
   </form>
 <br>
-  <form method="get" action="/">
+  <form method="get" action="/rating/">
     <button type="submit">Existing Reviews</button>
   </form>
 </div>
