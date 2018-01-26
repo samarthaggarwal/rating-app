@@ -1,8 +1,4 @@
 <?php
-  // $name = $_POST["productname"];
-  // $rating = $_POST["rating"];
-  // $comment = $_POST["comment"];
-
   $servername = "localhost";
   $username = "root";
   $password = "abc";
@@ -30,7 +26,7 @@
     echo "<br>error in entering data to db :<br>".$conn->error;
   }
 
-$newURL="main.php";
+$newURL="add_review.php";
 header('Location: '.$newURL);
 die();
 

@@ -12,7 +12,7 @@
 <div style="text-align:center" >
   <h1>Add review</h1>
   <br><br>
-  <form action="submit_form.php" method="post">
+  <form action="submit_review.php" method="post">
     Name of Product : <input type="text" name="productname" autofocus><br><br>
     Rating (between 0 to 10) : <input type="number" name="rating" step="0.01" min="0" max="10.1" autocomplete="off"><br><br>
     Comment : <textarea name="comment" rows="5" cols="50"></textarea><br><br>
