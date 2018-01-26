@@ -23,7 +23,7 @@
     <button type="submit">Add Product</button>
   </form>
 <br>
-  <form method="get" action="/">
+  <form method="get" action="/rating/view_reviews.php">
     <button type="submit">Existing Reviews</button>
   </form>
 </div>

@@ -22,7 +22,7 @@
     <button type="submit">Add Reviews</button>
   </form>
 <br>
-  <form method="get" action="/rating/">
+  <form method="get" action="/rating/view_reviews.php">
     <button type="submit">Existing Reviews</button>
   </form>
 </div>
