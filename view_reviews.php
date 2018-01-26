@@ -38,9 +38,12 @@
       </tr>";
       while($row = $result->fetch_assoc()) {
         // echo "product name : " . $row["product_name"]. " - Description: " . $row["description"]."<br>";
-      echo "<tr><td>".$row["product_name"]."</td>
+        //$sql = "SELECT AVG(user_rating) FROM (SELECT user_rating from comments c where c.product_name=".$row["product_name"].")";
+        $sql = "SELECT AVG(user_rating) from comments c where c.product_name=".$row["product_name"].")";
+      echo "<tr>
+        <td>".$row["product_name"]."</td>
         <td>".$row["description"]."</td>
-        <td></td>
+        <td>".$conn->query($sql)."</td>
         </tr>";
       }
      echo "</table>";
