@@ -39,20 +39,26 @@
       while($row = $result->fetch_assoc()) {
         // echo "product name : " . $row["product_name"]. " - Description: " . $row["description"]."<br>";
         //$sql = "SELECT AVG(user_rating) FROM (SELECT user_rating from comments c where c.product_name=".$row["product_name"].")";
-        $sql = "SELECT AVG(c.user_rating) from comments c where c.product_name='bottle'";
+        //$sql = "SELECT AVG(c.user_rating) as abc from comments c where c.product_name='bottle'";
+        //echo $row["product_name"];
+        $sql = "SELECT AVG(c.user_rating) as abc from comments c where c.product_name='".$row["product_name"]."'";
         //$sql = "select avg(user_rating) from comments";
 
         if($conn->query($sql)===true){
           echo "<br>successful query<br>".$sql;
         }
         else {
-          echo "<br>error in query:<br>".$conn->error;
+          //echo "<br>error in query:<br>".$conn->error;
         }
 
+        $res = $conn->query($sql);
+        $res = $res->fetch_assoc();
+        $res=$res["abc"];
+        //$res = $res["avg(c.user_rating)"];
       echo "<tr>
         <td>".$row["product_name"]."</td>
         <td>".$row["description"]."</td>
-        <td>".$conn->query($sql)."</td>
+        <td>".$res."</td>
         </tr>";
       }
      echo "</table>";
